@@ -11,10 +11,12 @@
 
 using namespace std;
 
+//TO DO
+//Simultaneous pings
 int main() {
     vector<string> online;
     std::string ip;
-    for(int i=1; i<254; ++i){
+    for(int i=1; i<255; ++i){
         ip = "192.168.20." + to_string(i);
         if(!(system(("ping -w 1 " + ip).c_str()))){
             online.push_back(ip);
